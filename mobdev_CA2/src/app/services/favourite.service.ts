@@ -8,6 +8,7 @@ const STORAGE_KEY = 'favouriteEpisodes';
 })
 
 export class FavouriteService {
+
     constructor(private storage: Storage) { }
 
     getAllFavouriteEpisodes() {

@@ -5,10 +5,10 @@
 		</ion-buttons>
 		<ion-title>{{ character?.name }}</ion-title>
 		<ion-buttons slot="end">
-			<ion-button (click)="unfavoriteepisode()" *ngIf="isFavorite">
+			<ion-button (click)="unfavouriteCharacter()" *ngIf="isFavouriteCharacter">
 				<ion-icon name="heart" slot="icon-only" color="secondary"></ion-icon>
 			</ion-button>
-			<ion-button (click)="favoriteepisode()" *ngIf="!isFavorite">
+			<ion-button (click)="favouriteCharacter()" *ngIf="!isFavouriteCharacter">
 				<ion-icon name="heart-outline" slot="icon-only" color="secondary"></ion-icon>
 			</ion-button>
 		</ion-buttons>
