@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
     providedIn: 'root'
 })
+
 export class ApiService {
 
     constructor(private http: HttpClient) { }
@@ -32,14 +33,14 @@ export class ApiService {
         //return this.http.get('https://www.breakingbadapi.com/api/quotes')
         return this.http.get('https://8100-dfc1daa3-815b-46ef-8169-b60214e407b8.ws-eu01.gitpod.io/assets/quotes.json')
     }
-
-    //getQuote(quote_id) {
-    //    return this.http.get('https://www.breakingbadapi.com/api/quotes/${quote_id}')
-    //}
+    
+    getQuote(author) {
+        return this.http.get(`https://www.breakingbadapi.com/api/quote?author=${author}`)
+    }
 
     getDeaths() {
-        //return this.http.get('https://www.breakingbadapi.com/api/deaths')
-        return this.http.get('https://8100-dfc1daa3-815b-46ef-8169-b60214e407b8.ws-eu01.gitpod.io/assets/deaths.json')
+        return this.http.get('https://www.breakingbadapi.com/api/deaths')
+        //return this.http.get('https://8100-dfc1daa3-815b-46ef-8169-b60214e407b8.ws-eu01.gitpod.io/assets/deaths.json')
     }
 
     getDeath(id) {

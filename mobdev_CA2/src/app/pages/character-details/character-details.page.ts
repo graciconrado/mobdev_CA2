@@ -10,10 +10,11 @@ import { LikeService } from '../../services/like.service';
 })
 export class CharacterDetailsPage implements OnInit {
     character: any;
-    isFavouriteCharacter = false;
+    isFavouriteCharacter = false;                                                                          
     characterId = null;
 
-    constructor(private activatedRoute: ActivatedRoute, private api: ApiService, private LikeService: LikeService) { }
+    constructor(private activatedRoute: ActivatedRoute, private api: ApiService, 
+        private LikeService: LikeService) { }
     ngOnInit() {
         this.characterId = this.activatedRoute.snapshot.paramMap.get('id');
         this.api.getCharacter(this.characterId).subscribe(res => {

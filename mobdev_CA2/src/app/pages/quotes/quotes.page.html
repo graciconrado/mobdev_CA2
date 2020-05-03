@@ -4,7 +4,21 @@
 	</ion-toolbar>
 </ion-header>
 <ion-content padding>
-	<ion-card *ngFor="let quote of quotes | async" class="movie-card">
+    <ion-item>
+    <ion-label>Search for author: </ion-label>
+    <ion-select [(ngModel)] = "author" (ionChange) = "searchChanged($event)">
+        <ion-select-option value = "">All</ion-select-option>
+        <ion-select-option value = "Walter White">Walter White</ion-select-option>
+        <ion-select-option value = "Skyler White">Skyler White</ion-select-option>
+        <ion-select-option value = "Jesse Pinkman">Jesse Pinkman</ion-select-option>
+        <ion-select-option value = "Saul Goodman">Saul Goodman</ion-select-option>
+        <ion-select-option value = "Hank Schrader">Hank Schrader</ion-select-option>
+        <ion-select-option value = "Gus Fring">Gus Fring</ion-select-option>
+        <ion-select-option value = "Mike Ehrmantraut">Mike Ehrmantraut</ion-select-option>
+        <ion-select-option value = "Hector Salamanca">Hector Salamanca</ion-select-option>
+    </ion-select>
+    </ion-item>
+	<ion-card *ngFor="let quote of quotes | async " class="movie-card">
 		<ion-item class="movie-info" lines="none">
 			" {{ quote.quote }} "
 		</ion-item>
