@@ -2,7 +2,7 @@
   "name": "mobdev_CA2",
   "version": "0.0.1",
   "engines": {
-    "node": "12.16.x"
+    "npm": "6.x"
   },
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
